@@ -49,18 +49,11 @@ let overall = parseFloat(eng_tot) + parseFloat(mat_tot) + parseFloat(com_tot) + 
 
 let per = parseInt((totalmark/overall)*100);
 alert("result");
-if(per==NaN)
+if( name==""||name==null,sub1n=="",sub1m=="")
 {
-    alert("not a number");
-    return false;
+alert("ENTER ALL THE VALID DETAILS")
+return false;
 }
-
-if(name==""||name==null,n2==""||n2==null,s1==""||s1==null,s2==""||s2==null,s3==""||s3==null,s4==""||s4==null,s5==""||s5==null,s6==""||s6==null,eng==""||eng==null,eng_tot==""||eng_tot==null,com==""||com==null,com_tot==""||com_tot==null,mat==""||mat==null,mat_tot==""||mat_tot==null,vb==""||vb==null,vb_tot==""||vb_tot==null,cpp==""||cpp==null,cpp_tot==""||cpp_tot==null,seng==""||seng==null,seng_tot==""||seng_tot==null)
-{
-    alert("fill in all needed data");
-    return false;
-}
-
 if(per <=100 && per>=80)
 {
 grades="A";
