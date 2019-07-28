@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>studentreg</title>
+   <link rel="stylesheet" href="./STYLE.CSS">
+    
+</head>
+<body>
+    
+    <table style="width: 100%" class="table table table-bordered table-dark" style="border: unset 3px">
+    <div class=".table-responsive">
+    
+        <table>
+              
+           
+        </table>
+        
+            <br>
+            <table style="width: 100%" class="table table table-bordered table-dark">
+                    <tr><td style="text-align: right"> <thead style="text-align: center"><b style="size: 30mm">REPORT CARD GENERATOR</b></thead></td> </tr>
+                    <tr style="border: 0px">
+                            <td >NAME:</td>
+                           <td>
+        
+                           <input type="text" id="name"></td>
+                    </tr>
+                    
+                    <tr>
+                            <td style="text-align: left">SEM:</td>
+                            <td><select name="" id="sem">
+                                <option value="first sem">1</option>
+                                <option value="secon sem">2</option>
+                                <option value="third sem">3</option>
+                                <option value="fourth sem">4</option>
+                                <option value="fifth sem">5</option>
+                            </select></td> 
+                            
+                            <td style="text-align: left">EXAM CODE:</td>
+                            <td>
+                                    <input type="number"  id="n2" step="1000" min="0" max="1000000">
+                            </td>
+                    </tr> 
+                
+                <tr> <br>
+                        <td>S1</td>
+                        <td><input type="text" id="s1" required></td>
+                        
+                        
+                        <td>S1 MARK :</td>
+                        <td><input type="number" id="eng" step="10" min="0" max="100"></td>
+                    
+                        <td> <label for="eng_tot"> S1 TOTAL MARK: </label></td>
+                        <td><input type="number" id="eng_tot" placeholder="100" step="50" min="0" max="100"></td>
+                </tr>
+               
+                <tr>
+                    <td>s2</td>
+                    <td><input type="text" id="s2" required></td>
+                    
+                    &nbsp;&nbsp;&nbsp;
+                    <td>S2 MARK:</td>
+                    <td><input type="number" id="mat" step="10" min="0" max="100"></td>
+                    &nbsp;&nbsp;&nbsp;
+                    <td><label>S2 TOTAL MARK:</label></td>
+                    <td><input type="number" id="mat_tot" placeholder="100" step="50" min="0" max="100"/></td>
+            </tr>
+            <tr>
+                <td>s3</td>
+                <td><input type="text" id="s3" required></td>
+                
+                <td>S3 MARK:</td>
+                <td><input type="number" id="com" step="10" min="0" max="100"></td>
+                &nbsp;&nbsp;&nbsp;
+                <td><label >S3 TOTAL MARK</label>
+                </td>
+                <td><input type="number" id="com_tot" placeholder="100" step="50" min="0" max="100"></td>
+        </tr>
+        <tr>
+            <td>s4</td>
+            <td><input type="text" id="s4" required></td>
+            
+            <td>S4 MARK :</td>
+            <td><input type="number" id="cpp" step="10" min="0" max="100"></td>
+            &nbsp;&nbsp;&nbsp;
+            <td><label for="">S4 TOTAL MARK:</label></td>
+            <td><input type="number" id="cpp_tot" placeholder="100" step="50" min="0" max="100"></td>
+    </tr>
+    <tr>
+        <td>s5</td>
+        <td> <input type="text" id="s5" required></td>
+        <td>S5 MARK:</td>
+        <td><input type="number" id="vb" step="10" min="0" max="100"></td>
+        &nbsp;&nbsp;&nbsp;
+        <td><label for="">S5 TOTAL MARK:</label></td>
+        <td><input type="number" id="vb_tot" placeholder="100" step="50" min="0" max="100"></td>
+</tr>
+<tr>
+    <td>s6</td>
+    <td><input type="text" id="s6" required></td>
+    <td>  S6 MARK:</td>
+    <td><input type="number" id="seng"step="10" min="0" max="100"></td>
+    &nbsp;&nbsp;&nbsp;
+    <td><label for="">S6 TOTAL MARK:</label></td>
+    <td><input type="number" id="seng_tot" placeholder="100" step="50" min="0" max="100"></td>
+</tr>
+<table>
+    
+<div ><p style="text-align: center"> <button type="button" onclick="getrslt();" class="btn btn-success" >GENERATE RESULT</button></p></div> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<tr>
+   
+</tr>
+
+</table>
+<table style="width: 100%;border: black unset 2px" class="table table-bordered table-dark" >
+<tr>
+        <form action="">
+                <th id="namedisp" style="text-align: center">name </th> <br>
+                <th id="semdisp" style="text-align: center">sem </th> <br>
+                <th id="codedisp" style="text-align: center">code</th> <br>
+            
+                <tr> 
+                   <p style="align-content: center"><b> RESULT  </b> </p> 
+                    <td></td>
+                    <td></td>
+            
+                </tr>
+                <tr>
+                    <table class="table table-bordered table-success ">
+                    <th style="border: solid 2px;text-align: center" >subject      </th>
+                    <th style="border: solid 2px;text-align: center">mark        </th>
+                    <th style="border: solid 2px;text-align: center">total mark   </th>
+                   <tr> 
+                       <td><p id="sub1n"></p></td>
+                    <td><div id="sub1m"></div></td>
+                    <td><div id="sub1tm"></div></td>
+                </tr>
+                <tr> 
+                        <td><p id="sub2n"></p></td>
+                     <td><div id="sub2m"></div></td>
+                     <td><div id="sub2tm"></div></td>
+                 </tr>
+                 <tr> 
+                        <td><p id="sub3n"></p></td>
+                     <td><div id="sub3m"></div></td>
+                     <td><div id="sub3tm"></div></td>
+                 </tr>
+                 <tr> 
+                        <td><p id="sub4n"></p></td>
+                     <td><div id="sub4m"></div></td>
+                     <td><div id="sub4tm"></div></td>
+                 </tr>
+                 <tr> 
+                        <td><p id="sub5n"></p></td>
+                     <td><div id="sub5m"></div></td>
+                     <td><div id="sub5tm"></div></td>
+                 </tr>
+                 <tr> 
+                        <td><p id="sub6n"></p></td>
+                     <td><div id="sub6m"></div></td>
+                     <td><div id="sub6tm"></div></td>
+                 </tr>
+                    
+                </tr>
+                <tr>
+                    <td><p id="gradepoint"></p></td>
+                    <td > <p id="result"></p></td>
+                </tr>
+                <tr> </tr>
+            </table>
+        
+    
+    </div>
+       
+        
+</tr>
+</table>
+            </table>
+            <script src="./js/final.js">
+      
+  
+                
+    
+
+    
+            </script>
+    </form>
+</table>
+</body>
+</html>
