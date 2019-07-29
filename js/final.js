@@ -48,7 +48,7 @@ let grade="";
 let overall = parseFloat(eng_tot) + parseFloat(mat_tot) + parseFloat(com_tot) + parseFloat(vb_tot) + parseFloat(seng_tot) + parseFloat(cpp_tot);
 
 let per = parseInt((totalmark/overall)*100);
-alert("result");
+alert("CHECKING ENTERD DATA");
 if( name==""||name==null,sub1n=="",sub1m=="")
 {
 alert("ENTER ALL THE VALID DETAILS")
